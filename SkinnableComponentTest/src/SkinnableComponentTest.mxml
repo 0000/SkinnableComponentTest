@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			   xmlns:s="library://ns.adobe.com/flex/spark" 
+			   xmlns:mx="library://ns.adobe.com/flex/mx"
+			   xmlns:component="com.flexComponent.component.*"
+			   width="500" height="200">
+	<fx:Script>
+		<![CDATA[
+			import mx.controls.Alert;
+			
+			protected function dragbutton1_completeHandler(event:Event):void
+			{
+				Alert.show("Complete");
+			}
+			
+		]]>
+	</fx:Script>
+	<fx:Style>
+		@namespace s "library://ns.adobe.com/flex/spark";
+		@namespace mx "library://ns.adobe.com/flex/mx";
+		@namespace components "com.touchring.components.*";
+		@namespace component "com.flexComponent.component.*";
+		
+		component|DragButton {
+			skinClass: ClassReference("com.flexComponent.skin.DragButtonSkin");
+		}
+	</fx:Style>
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<component:DragButton width="100%" height="30"
+						  verticalCenter="0"
+						  autoCompletePercent=".4"
+						  complete="dragbutton1_completeHandler(event)"/>
+	
+</s:Application> 

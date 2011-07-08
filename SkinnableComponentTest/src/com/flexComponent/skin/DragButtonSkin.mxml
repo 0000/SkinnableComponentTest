@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Skin xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		xmlns:s="library://ns.adobe.com/flex/spark" 
+		xmlns:mx="library://ns.adobe.com/flex/mx"
+		minWidth="80" minHeight="20">
+	
+	<fx:Metadata>
+		[HostComponent("com.flexComponent.component.DragButton")]
+	</fx:Metadata>
+	
+	<s:Rect top="0" bottom="0" left="0" right="0"
+			radiusX="3" radiusY="3">
+		<s:stroke>
+			<s:SolidColorStroke color="0x666666"/>
+		</s:stroke>
+		<s:fill>
+			<s:SolidColor color="0xFFFFFF"/>
+		</s:fill>
+	</s:Rect>
+	
+	<!-- Track -->
+	<s:Rect id="track" top="1" bottom="1" left="1" right="1"/>
+	
+	<!-- Thumb -->
+	<s:Button id="thumb" x="0" top="1" bottom="1"
+			  minWidth="40" minHeight="18"
+			  useHandCursor="true" buttonMode="true"/>
+</s:Skin> 
